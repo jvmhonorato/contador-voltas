@@ -1,0 +1,7 @@
+1: npx create-react-app my-project
+
+2: npm run start
+
+3: limpar arquivos desnecessário do react
+
+4: construir componentes em App.js e voltar o JSX
