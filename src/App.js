@@ -20,16 +20,26 @@ const Button = ({text, onClick}) => <button onClick={onClick}>{text}</button>
 function App() {
 // current state, change state  =  start state
 const [numVoltas, setNumVoltas] = useState(10)
+const [running, setRunning] = useState(false)
 const [tempo, setTempo] = useState(0)
 
 useEffect(() => {
-  setInterval(() => {
-    console.log('chamou')
+  let timer = null
+  if (running) {
+  timer = setInterval(() => {
+   setTempo(old => old + 1)
   },1000)
+  }
+  return () =>{
+    if (timer) {
+      clearInterval(timer)
+    }
+  }
+}, [running])
 
-}, [])
-
-
+const toggleRunning = () => {
+  setRunning(!running)
+}
   
   const increment = () => {
     setNumVoltas(numVoltas + 1)
@@ -47,7 +57,7 @@ useEffect(() => {
       <Button text='+' onClick={increment}/>
       <Button text='-' onClick={decrement}/>
      <MostraTempo tempo={tempo}/>
-     <Button text='Iniciar'/>
+     <Button  text='Iniciar' onClick={toggleRunning}/>
      <Button text='Reiniciar'/>
     </div>
   )
