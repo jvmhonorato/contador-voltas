@@ -5,3 +5,10 @@
 3: limpar arquivos desnecessário do react
 
 4: construir componentes em App.js e voltar o JSX
+
+USESTATE
+5: usar o useState como função de incremento pra add e remover dados(numeros)
+
+
+USEEFFECT
+6: usar o setInterval drentro do useEffect. o useEffect serve pra controla o efeito das funções dentro do bloco da função deixando assincrono em relação a dinamica das outras rotinas do bloco, passar um [] como segundo parâmetro pra estabilizar em uma única chamda
