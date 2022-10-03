@@ -22,3 +22,20 @@ USEEFFECT
 9: passar uma condicinal no JSX pra apenas renderizar o componete MostrarTempo se o state numVoltas for > 0 maior que zero, em seguida dividir o tempo pelo numero de voltar: {tempo/numVoltas}
 
 10: criar a função reset passando o setTempo e o setNumVoltas =0 em seguida passar o evento onClick no Button reiniciar
+
+11: Separar componente por arquivos
+
+
+STYLES
+
+12:Em google fontes baixar a font desejada no modo @import copiar e colar no arquivo styles.css removendo o "https:"
+
+13: depois em styles.css passar body{} com a especificação que tem la no google fonts pra ficar de forma global
+
+14: adde className nos componente pra estilizar de acordo com o projeto
+
+AJUSTES FINAIS
+
+15: passar um operador ternario pra modificar o texto do botão Iniciar/Pausar
+
+16: passar umja condicional do decrement pra que ele não fique negativo ao apertar quando tiver apenas uma volta

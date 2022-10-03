@@ -1,0 +1,34 @@
+@import url('//fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap');
+
+body{
+    font-family: 'Titillium Web', sans-serif;
+    text-align: center;
+}
+.voltas {
+    font-size: 64px;
+    font-weight: bold;
+
+}
+.voltas span {
+    font-size: 288px;
+    font-weight: bold;
+}
+
+button {
+    background-color: #f9f9f9;
+    border: 1px solid black;
+    font-size: 18px;
+    padding: 22px;
+    margin: 8px;
+}
+
+.tempo {
+    font-weight: bold;
+    font-size: 64px;
+}
+
+.bigger {
+    font-size: 144px;
+    font-weight: bold;
+    line-height: 80px;
+}

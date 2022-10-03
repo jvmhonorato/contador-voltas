@@ -1,26 +1,11 @@
 import React ,{useState, useEffect} from "react";
+import './styles.css'
+import MostraVoltas from "./MostrarVoltas";
+import MostraTempo from "./MostrarTempo";
+import Button from "./Button";
 
 
-const MostraVoltas = ({voltas}) => {
-  return (
-    <p>Voltas: {voltas}</p>
-  )
 
-}
-const MostraTempo = (props) => {
-  const tempo = props.tempo
-  const minutos = Math.round(tempo / 60)
-  const segundos = tempo % 60
-  const minutosStr = minutos < 10 ? '0' + minutos : minutos
-  const segundosStr = segundos < 10 ? '0'+ segundos : segundos
-  return (
-    <p>{`${minutosStr}:${segundosStr}`}<br/>Tempo médio de voltas</p>
-  )
-
-}
-
-//put event onClick as a props before send to component
-const Button = ({text, onClick}) => <button onClick={onClick}>{text}</button>
 
 function App() {
 // current state, change state  =  start state
@@ -55,7 +40,9 @@ const reset = () => {
     console.log('increment')
   }
   const decrement = () => {
+    if(numVoltas > 0 ){
     setNumVoltas(numVoltas - 1)
+  }
     console.log('decrement')
   }
   return (
@@ -63,12 +50,13 @@ const reset = () => {
       <h1>Contador-voltas</h1>
       <MostraVoltas voltas={numVoltas}/>
       
-      <Button text='+' onClick={increment}/>
-      <Button text='-' onClick={decrement}/>
+      <Button text='+' className='bigger' onClick={increment}/>
+      <Button text='-' className='bigger' onClick={decrement}/>
       {numVoltas > 0 &&
       <MostraTempo tempo={Math.round(tempo/numVoltas)}/>
       }
-      <Button  text='Iniciar' onClick={toggleRunning}/>
+      <br/>
+      <Button  text={running ? 'Pausar' : 'Iniciar'} onClick={toggleRunning}/>
       <Button text='Reiniciar'onClick={reset}/>
     </div>
   )
