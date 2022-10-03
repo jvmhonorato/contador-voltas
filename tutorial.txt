@@ -15,4 +15,10 @@ USESTATE
 USEEFFECT
 6: usar o setInterval drentro do useEffect. o useEffect serve pra controla o efeito das funções dentro do bloco da função deixando assincrono em relação a dinamica das outras rotinas do bloco, passar um [] como segundo parâmetro pra estabilizar em uma única chamda
 
-7: criar useState running e passar como segundo argumento do useEffect, em seguida criar um função que mude o estado de running no hook useEffect: toggleRunning, e passar no button iniciar
+7: criar useState running e passar como segundo argumento do useEffect, em seguida criar um função que mude o estado de running no hook useEffect: toggleRunning, e passar no button iniciar OBS:o running que é uma função bollean  será responsavel em dizer quando o useEffect ira estar ativo ou não!
+
+8: No componente MostrarTempo passar os minutos e segundo convertidos com a propriedade Math.rounds depois passar uma lógica ternária as constantes minutosStr e segundosStr
+
+9: passar uma condicinal no JSX pra apenas renderizar o componete MostrarTempo se o state numVoltas for > 0 maior que zero, em seguida dividir o tempo pelo numero de voltar: {tempo/numVoltas}
+
+10: criar a função reset passando o setTempo e o setNumVoltas =0 em seguida passar o evento onClick no Button reiniciar
